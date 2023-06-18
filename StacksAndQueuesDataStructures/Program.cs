@@ -9,7 +9,7 @@ namespace StacksAndQueuesDataStructure
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose Option to Perform\n1.Push the Code\n2.Exit");
+                Console.WriteLine("Choose Option to Perform\n1.Push the Code\n2.Peek and Pop\n3.Exit");
                 int option=Convert.ToInt32(Console.ReadLine());
                 StacksAndQueues stack=new StacksAndQueues();
                 switch (option)
@@ -21,6 +21,14 @@ namespace StacksAndQueuesDataStructure
                         stack.Display();
                         break;
                         case 2:
+                        stack.Push(56);
+                        stack.Push(30);
+                        stack.Push(70);
+                        stack.Peak();
+                        stack.Pop();
+                        stack.Display();
+                        break;
+                        case 3:
                         flag= false;
                         break;
                 }
