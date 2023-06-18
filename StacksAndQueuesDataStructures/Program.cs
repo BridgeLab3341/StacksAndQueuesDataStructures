@@ -9,9 +9,10 @@ namespace StacksAndQueuesDataStructure
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose Option to Perform\n1.Push the Code\n2.Peek and Pop\n3.Enqueu the Queues\n4.Exit");
+                Console.WriteLine("Choose Option to Perform\n1.Push the Code\n2.Peek and Pop\n3.Enqueu the Queues\n4.Dequeue the Queues\n5.Exit");
                 int option=Convert.ToInt32(Console.ReadLine());
                 StacksAndQueues stack=new StacksAndQueues();
+                Queues queues = new Queues();
                 switch (option)
                 {
                     case 1:
@@ -29,13 +30,19 @@ namespace StacksAndQueuesDataStructure
                         stack.Display();
                         break;
                     case 3:
-                        Queues queues=new Queues();
                         queues.Enqueue(56);
                         queues.Enqueue(30);
                         queues.Enqueue(70);
                         queues.Display();
                         break;
                         case 4:
+                        queues.Enqueue(56);
+                        queues.Enqueue(30);
+                        queues.Enqueue(70);
+                        queues.Dequeue();
+                        queues.Display();
+                        break;
+                        case 5:
                         flag= false;
                         break;
                 }

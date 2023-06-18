@@ -55,5 +55,6 @@ namespace StacksAndQueuesDataStructures
             Console.WriteLine("{0} is in the top of the Stack",this.top.data);
             this.top = this.top.next;
         }
+        
     }
 }
